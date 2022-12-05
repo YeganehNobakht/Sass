@@ -1,0 +1,64 @@
+.logo{
+    @include flexLayout;
+    font-size: 70px;
+    color: $color_primary;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: 110px;
+    height: 110px;
+    margin-right: 20px;
+    border: 3px solid $color_primary;
+    border-radius: 50px;
+    
+}
+
+.main-name{
+    font-family: $font_nunito;
+    font-size: 50px;
+    color: $color_secondary;
+    @include textStyle
+}
+
+.sub-name{
+    font-family: $font_josefinSans;
+    font-size: 18px;
+    color: $color_secondary;
+    text-align: center;
+    @include textStyle
+}
+
+.main-heading{
+    font-family: $font_dancingScript;
+    font-size: 100px;
+    font-weight: 300;
+    color: $color_primary;
+    margin-bottom: 40px;
+}
+
+.sub-heading{
+    font-family: $font_josefinSans;
+    font-size: 60px;
+    font-weight: 300;
+    color: $color_secondary;
+    margin-bottom: 80px;
+}
+
+.main-btn{
+    width: 170px;
+    height: 45px;
+    font-family: $font_josefinSans;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color_primary;
+    background-color: transparent;
+    border: 1px solid $color_primary;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover{
+        background-color: $color_primary;
+        color: $color_dark;
+    }
+}
