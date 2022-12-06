@@ -1,24 +1,87 @@
-.header{
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(rgba($color_black,0.8),rgba($color_black,0.6)), url(../images/bg.jpeg) center no-repeat;
-    background-size: cover;
-    position: relative;
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba($color_black, 0.8), rgba($color_black, 0.6)),
+    url(../images/bg.jpeg) center no-repeat;
+  background-size: cover;
+  position: relative;
 
-    .brand{
-        
-        @include centering(15%);
-        // position: absolute;
-        // top: 15%;
-        // left: 50%;
-        // transform: translate(-50%,-50%);
-        @include flexLayout;
-        // display: flex;
-        // align-items: center;
+  .brand {
+    @include centering(15%);
+    // position: absolute;
+    // top: 15%;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
+    @include flexLayout;
+    // display: flex;
+    // align-items: center;
+  }
+
+  &-banner {
+    text-align: center;
+    @include centering(50%);
+  }
+}
+
+.about-us {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+
+  &-left {
+    width: 40%;
+
+    img {
+      width: 100%;
+      opacity: 0.7;
+    }
+  }
+
+  &-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 80px;
+    box-sizing: border-box;
+
+
+    .main-heading{
+        font-size: 60px;
+        margin-bottom: 20px;
     }
 
-    &-banner{
-        text-align: center;
-        @include centering(50%)
+    .sub-heading{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .stars {
+      margin: 30px 0;
+    }
+    .star {
+      font-size: 15px;
+      color: $color_primary;
+      margin-left: 10px;
+    }
+
+    .description {
+      font-family: $font_Sahel;
+      font-size: 25px;
+      color: $color_secondary;
+      direction: rtl;
+      text-align: justify;
+
+      &::first-letter{
+          padding-right: 30px;
+      }
+    }
+  }
+}
+
+.gallery{
+    .cards-wrapper{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
