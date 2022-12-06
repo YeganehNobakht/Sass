@@ -14,14 +14,16 @@
 }
 
 .main-name{
-    font-family: $font_nunito;
+    // font-family: $font_nunito;
+    font-family: $font_Sahel;
     font-size: 50px;
     color: $color_secondary;
     @include textStyle
 }
 
 .sub-name{
-    font-family: $font_josefinSans;
+    // font-family: $font_josefinSans;
+    font-family: $font_Sahel;
     font-size: 18px;
     color: $color_secondary;
     text-align: center;
@@ -29,7 +31,8 @@
 }
 
 .main-heading{
-    font-family: $font_dancingScript;
+    // font-family: $font_dancingScript;
+    font-family: $font_Sahel;
     font-size: 100px;
     font-weight: 300;
     color: $color_primary;
@@ -37,7 +40,8 @@
 }
 
 .sub-heading{
-    font-family: $font_josefinSans;
+    // font-family: $font_josefinSans;
+    font-family: $font_Nastaliq;
     font-size: 60px;
     font-weight: 300;
     color: $color_secondary;
@@ -47,7 +51,8 @@
 .main-btn{
     width: 170px;
     height: 45px;
-    font-family: $font_josefinSans;
+    // font-family: $font_josefinSans;
+    font-family: $font_Sahel;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;

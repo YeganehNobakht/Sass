@@ -6,6 +6,21 @@ $color_secondary: #bbb;
 $font_dancingScript : 'Dancing Script', cursive;
 $font_josefinSans: 'Josefin Sans', sans-serif;
 $font_nunito: "Nunito", sans-serif;
+$font_Sahel: Sahel, Tahoma;
+$font_Nastaliq: Nastaliq, Tahoma;
+
+@font-face {
+    font-family: Sahel;
+    src: url(../fonts/Sahel.eot);
+    src: url(../fonts/Sahel.ttf) format("ttf");
+    src: url(../fonts/Sahel.woff) format("woff");
+    font-weight: normal;
+}
+@font-face {
+    font-family: Nastaliq;
+    src: url(../fonts/IranNastaliq.ttf) format("ttf");
+    font-weight: normal;
+}
 
 @mixin flexLayout {
     display: flex;
