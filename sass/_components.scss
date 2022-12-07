@@ -1,129 +1,152 @@
-.logo{
-    font-size: 70px;
-    color: $color_primary;
-    @include flexLayout;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    width: 110px;
-    height: 110px;
-    margin-right: 20px;
-    border: 3px solid $color_primary;
-    border-radius: 50px;
-    
-}
+.hamburger-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  z-index: 300;
 
-.main-name{
-    // font-family: $font_nunito;
-    font-family: $font_Sahel;
-    font-size: 50px;
-    color: $color_secondary;
-    @include textStyle
-}
-
-.sub-name{
-    // font-family: $font_josefinSans;
-    font-family: $font_Sahel;
-    font-size: 18px;
-    color: $color_secondary;
-    text-align: center;
-    @include textStyle
-}
-
-.main-heading{
-    // font-family: $font_dancingScript;
-    font-family: $font_Nastaliq;
-    font-size: 100px;
-    font-weight: 300;
-    color: $color_primary;
-    margin-bottom: 40px;
-}
-
-.sub-heading{
-    // font-family: $font_josefinSans;
-    font-family: $font_Sahel;
-    font-size: 60px;
-    font-weight: 300;
-    color: $color_secondary;
-    margin-bottom: 80px;
-}
-
-.main-btn{
-    width: 170px;
-    height: 45px;
-    // font-family: $font_josefinSans;
-    font-family: $font_Sahel;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: $color_primary;
-    background-color: transparent;
-    border: 1px solid $color_primary;
+  .menu {
+    @extend %fullSpace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     cursor: pointer;
-    transition: all 0.4s;
+    transition: transform 0.5s;
 
-    &:hover{
-        background-color: $color_primary;
-        color: $color_dark;
+    &-line {
+      width: 100%;
+      height: 4px;
+      background-color: $color_primary;
+      transition: all 0.5s 0.5s;
+      transform-origin: right;
     }
+  }
+}
+.logo {
+  font-size: 70px;
+  color: $color_primary;
+  @include flexLayout;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  width: 110px;
+  height: 110px;
+  margin-right: 20px;
+  border: 3px solid $color_primary;
+  border-radius: 50px;
 }
 
+.main-name {
+  // font-family: $font_nunito;
+  font-family: $font_Sahel;
+  font-size: 50px;
+  color: $color_secondary;
+  @include textStyle;
+}
 
-.card{
-    height: 30vw;
-    width: 33.333333%;
-    position: relative;
-    // because of card-overlay's left property
-    overflow: hidden;
+.sub-name {
+  // font-family: $font_josefinSans;
+  font-family: $font_Sahel;
+  font-size: 18px;
+  color: $color_secondary;
+  text-align: center;
+  @include textStyle;
+}
 
-    &:hover .card-overlay{
-        left: 0;
+.main-heading {
+  // font-family: $font_dancingScript;
+  font-family: $font_Nastaliq;
+  font-size: 100px;
+  font-weight: 300;
+  color: $color_primary;
+  margin-bottom: 40px;
+}
+
+.sub-heading {
+  // font-family: $font_josefinSans;
+  font-family: $font_Sahel;
+  font-size: 60px;
+  font-weight: 300;
+  color: $color_secondary;
+  margin-bottom: 80px;
+}
+
+.main-btn {
+  width: 170px;
+  height: 45px;
+  // font-family: $font_josefinSans;
+  font-family: $font_Sahel;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color_primary;
+  background-color: transparent;
+  border: 1px solid $color_primary;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: $color_primary;
+    color: $color_dark;
+  }
+}
+
+.card {
+  height: 30vw;
+  width: 33.333333%;
+  position: relative;
+  // because of card-overlay's left property
+  overflow: hidden;
+
+  &:hover .card-overlay {
+    left: 0;
+  }
+
+  .card-overlay {
+    @extend %fullSpace;
+    @include flexLayout;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: left 0.5s;
+    // width: 100%;
+    // height: 100%;
+    background-color: rgba($color_primary, 0.6);
+    color: $color_white;
+    z-index: 10;
+    &-heading {
+      font-family: $font_Nastaliq;
+      font-size: 50px;
+      @include textStyle;
     }
 
-    .card-overlay{
-        @extend %fullSpace;
-        @include flexLayout;
-        flex-direction: column;
-        position: absolute;
-        top: 0;
-        left: -100%;
-        transition: left 0.5s;
-        // width: 100%;
-        // height: 100%;
-        background-color: rgba($color_primary, 0.6);
-        color: $color_white;
-        z-index: 10;
-        &-heading{
-            font-family: $font_Nastaliq;
-            font-size: 50px;
-            @include textStyle;
-        }
-    
-        &-paragraph{
-            font-family: $font_Sahel;
-            font-size: 30px;
-            margin-bottom: 30px;
-            @include textStyle;
-        }
-    
-        &-btn{
-            width: 150px;
-            height: 40px;
-            color: $color_primary;
-            background-color: $color_white;
-            font-family: $font_Sahel;
-            font-size: 14px;
-            border: 1px solid $color_primary;
-            border-radius: 30px;
-            cursor: pointer;
-        }
+    &-paragraph {
+      font-family: $font_Sahel;
+      font-size: 30px;
+      margin-bottom: 30px;
+      @include textStyle;
     }
 
-    .card-img{
-        @extend %fullSpace;
-        // width: 100%;
-        // height: 100%;
-        object-fit: cover;
-        opacity: 0.5;
+    &-btn {
+      width: 150px;
+      height: 40px;
+      color: $color_primary;
+      background-color: $color_white;
+      font-family: $font_Sahel;
+      font-size: 14px;
+      border: 1px solid $color_primary;
+      border-radius: 30px;
+      cursor: pointer;
     }
+  }
+
+  .card-img {
+    @extend %fullSpace;
+    // width: 100%;
+    // height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
 }
