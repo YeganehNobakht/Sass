@@ -127,8 +127,16 @@
   display: flex;
   align-items: center;
 
+  @media (max-width: 800px) {
+    height: 70vh;
+  }
+
   &-left {
     width: 40%;
+
+    @media (max-width: 800px) {
+        display: none;
+      }
 
     img {
       width: 100%;
@@ -144,24 +152,58 @@
     padding: 0 80px;
     box-sizing: border-box;
 
+    
+  @media (max-width: 1300px) {
+    padding: 0 50px;
+  }
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 
     .main-heading{
         font-size: 60px;
         margin-bottom: 20px;
+
+        @media (max-width: 1600px) {
+            font-size: 80px;
+          }
+          @media (max-width: 1000px) {
+            font-size: 60px;
+          }
     }
 
     .sub-heading{
         font-size: 40px;
         margin-bottom: 20px;
+
+        @media (max-width: 1600px) {
+            font-size: 50px;
+            margin-bottom: 50px;
+          }
+          @media (max-width: 1300px) {
+            font-size: 40px;
+            margin-bottom: 30px;
+          }
+          @media (max-width: 1000px) {
+            font-size: 30px;
+          }
     }
 
     .stars {
       margin: 30px 0;
+
+      @media (max-width: 1000px) {
+        margin: 15px;
+      }
     }
     .star {
       font-size: 15px;
       color: $color_primary;
       margin-left: 10px;
+
+      @media (max-width: 1000px) {
+        font-size: 12px;
+      }
     }
 
     .description {
@@ -173,6 +215,14 @@
 
       &::first-letter{
           padding-right: 30px;
+      }
+
+      @media (max-width: 1600px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 1000px) {
+        font-size: 14px;
       }
     }
   }
@@ -215,6 +265,10 @@
         &:hover{
             color: $color_secondary;
         }
+
+        @media (max-width: 1000px) {
+            font-size: 35px;
+          }
     }
 
     &-copyright-paragraph{
@@ -222,6 +276,12 @@
         font-size: 20px;
         color: $color_secondary;
         direction: rtl;
+
+        @media (max-width: 800px) {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+          }
     }
 
 }
